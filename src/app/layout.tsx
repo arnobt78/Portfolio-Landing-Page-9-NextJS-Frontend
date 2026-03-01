@@ -64,11 +64,13 @@ export const viewport: Viewport = {
   themeColor: '#0f1624',
 };
 
-// Critical CSS to prevent white flash on load/refresh (matches theme before styled-components hydrate)
+// Critical CSS to prevent white flash and link (violet/purple) flash before styled-components hydrate
 const criticalStyles = `
   html{font-size:62.5%;scroll-behavior:smooth;background:#0F1624;}
   body{background:#0F1624 !important;color:hsl(204,23.8%,95.9%) !important;margin:0;padding:0;}
   *,:after,:before{box-sizing:border-box;}
+  a{color:inherit;text-decoration:none;}
+  a:link,a:visited,a:hover,a:active{color:inherit;}
 `;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
