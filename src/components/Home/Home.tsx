@@ -6,13 +6,13 @@ import Hero from '@/components/Hero/Hero';
 import Projects from '@/components/Projects/Projects';
 import Technologies from '@/components/Technologies/Technologies';
 import Timeline from '@/components/TimeLine/TimeLine';
+import { Section } from '@/components/ui/Section';
 import { Layout } from '@/layout/Layout';
-import { Section } from '@/styles/GlobalComponents';
 
 export default function Home() {
   return (
     <Layout>
-      <Section grid>
+      <Section grid nopadding>
         <Hero />
         <BackgroundAnimation />
       </Section>

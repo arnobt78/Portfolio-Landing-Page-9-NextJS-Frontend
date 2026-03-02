@@ -1,0 +1,42 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-background: #0f1624;
+  --color-primary: hsl(204 23.8% 95.9%);
+  --color-surface: #212d45;
+  --font-sans: var(--font-space-grotesk), sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    font-family: var(--font-sans);
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    -webkit-font-smoothing: antialiased;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: inherit;
+  }
+  ul,
+  ol,
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}

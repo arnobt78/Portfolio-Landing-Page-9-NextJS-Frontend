@@ -2,7 +2,6 @@
 
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
-import { Container } from './LayoutStyles';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -10,10 +9,10 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
   return (
-    <Container>
+    <div className="max-w-[1280px] w-full mx-auto">
       <Header />
       <main>{children}</main>
       <Footer />
-    </Container>
+    </div>
   );
 }

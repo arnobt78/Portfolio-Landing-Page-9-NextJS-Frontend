@@ -1,10 +1,11 @@
-# Portfolio Landing Page 9 - Next.js, TypeScript, Styled Components Frontend Project
+# Portfolio Landing Page 9 - Next.js, TypeScript, TailwindCSS, Framer Motion Frontend Project
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-18.3-blue)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
-[![Styled Components](https://img.shields.io/badge/Styled%20Components-6.1-purple)](https://styled-components.com/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.2.1-blue)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer%20Motion-12.34.3-black)](https://www.framer.com/motion/)
 
 A modern, single-page portfolio template built with the Next.js App Router, TypeScript, and Styled Components. Use it to showcase your projects, skills, timeline, and accomplishments with a clean, responsive layout and SEO-friendly metadata. Ideal for developers and learners who want a production-ready portfolio with clear structure and reusable components.
 

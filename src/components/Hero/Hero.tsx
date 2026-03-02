@@ -1,9 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Section, SectionText, SectionTitle } from '@/styles/GlobalComponents';
-import Button from '@/styles/GlobalComponents/Button';
-import { LeftSection } from './HeroStyles';
+import { Section, SectionText, SectionTitle } from '@/components/ui/Section';
+import Button from '@/components/ui/Button';
 
 interface HeroProps {
   handleClick?: () => void;
@@ -16,11 +15,11 @@ export default function Hero({ handleClick }: HeroProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-      style={{ width: '100%' }}
+      className="w-full"
     >
-      <Section row nopadding>
-        <LeftSection>
-          <SectionTitle main center>
+      <Section row nopadding className="flex flex-row">
+        <div className="w-full sm:w-4/5 sm:flex sm:flex-col sm:mx-auto md:w-full md:flex md:flex-col md:mx-auto">
+          <SectionTitle main className="text-center">
             Welcome To <br />
             My Personal Portfolio
           </SectionTitle>
@@ -29,7 +28,7 @@ export default function Hero({ handleClick }: HeroProps) {
             their development skills to the next level and build awesome apps.
           </SectionText>
           <Button onClick={handleClick}>Learn More</Button>
-        </LeftSection>
+        </div>
       </Section>
     </motion.div>
   );
