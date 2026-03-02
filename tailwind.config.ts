@@ -8,8 +8,16 @@ const config: Config = {
     './src/layout/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/ui/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  safelist: [
+    'grid', 'grid-cols-2', 'flex', 'flex-col', 'flex-row',
+    'max-w-7xl', 'mx-auto', 'text-transparent', 'bg-clip-text',
+    'opacity-100', 'opacity-0', 'text-white/50', 'w-full',
+  ],
   theme: {
     extend: {
+      maxWidth: {
+        '7xl': '1280px',
+      },
       colors: {
         background: '#0F1624',
         primary: 'hsl(204, 23.8%, 95.9%)',

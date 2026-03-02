@@ -71,7 +71,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-GB" className={spaceGrotesk.variable}>
+    <html lang="en-GB" className={spaceGrotesk.variable} suppressHydrationWarning>
       <body className="min-h-screen bg-background text-primary">
         <Providers>{children}</Providers>
       </body>

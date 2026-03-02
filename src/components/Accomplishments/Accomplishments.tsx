@@ -1,7 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { Section, SectionDivider, SectionTitle } from '@/components/ui/Section';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const data = [
   { number: 20, text: 'Open Source Projects' },
@@ -10,51 +9,34 @@ const data = [
   { number: 5000, text: 'Github Stars' },
 ];
 
+const sectionTitle: React.CSSProperties = {
+  fontWeight: 800, fontSize: 'clamp(32px, 4vw, 56px)', lineHeight: 1,
+  background: 'linear-gradient(121.57deg, #ffffff 18.77%, rgba(255,255,255,0.66) 60.15%)',
+  WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
+  backgroundClip: 'text', color: 'transparent', margin: '0 0 16px',
+};
+const box: React.CSSProperties = {
+  background: '#212d45', borderRadius: 12, padding: 24, minHeight: 144,
+};
+
 export default function Accomplishments() {
+  const ref = useScrollReveal<HTMLElement>(0.1);
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 36 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-      className="w-full"
-    >
-      <Section>
-        <SectionTitle>Personal Achievements</SectionTitle>
-        <motion.div
-          className="w-full grid grid-cols-4 gap-6 my-6 mx-0 md:gap-4 md:my-5 md:grid-cols-[repeat(auto-fit,minmax(140px,1fr))] sm:grid-cols-2 sm:gap-2.5 sm:max-w-[500px] sm:mx-auto"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.15 }}
-          variants={{
-            hidden: {},
-            visible: { transition: { staggerChildren: 0.1, delayChildren: 0.08 } },
-          }}
-        >
-          {data.map((card, index) => (
-            <motion.div
-              key={index}
-              className="bg-surface rounded-xl h-36 p-6 lg:h-[210px] md:h-[135px] md:p-4 sm:h-[110px] sm:p-3 sm:[&:nth-child(2n)]:row-span-1 sm:[&:nth-child(2n)]:row-start-2"
-              variants={{
-                hidden: { opacity: 0, scale: 0.92 },
-                visible: {
-                  opacity: 1,
-                  scale: 1,
-                  transition: { duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] },
-                },
-              }}
-            >
-              <h5 className="font-semibold text-4xl leading-10 tracking-wide text-white mb-2 md:text-3xl md:leading-8 sm:text-2xl sm:leading-6">
-                {`${card.number}+`}
-              </h5>
-              <p className="font-normal text-lg leading-6 tracking-wide text-white/75 md:text-base md:leading-5 sm:text-[10px] sm:leading-[14px]">
-                {card.text}
-              </p>
-            </motion.div>
-          ))}
-        </motion.div>
-        <SectionDivider />
-      </Section>
-    </motion.div>
+    <section ref={ref} className="anim-scale-in" style={{ padding: '32px 0 0' }}>
+      <h2 style={sectionTitle}>Personal Achievements</h2>
+      <div className="stagger-children" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24, margin: '24px 0' }}>
+        {data.map((card, index) => (
+          <div key={index} style={box}>
+            <h5 style={{ fontWeight: 600, fontSize: 36, lineHeight: '40px', letterSpacing: '0.01em', color: 'white', marginBottom: 8, margin: '0 0 8px' }}>
+              {`${card.number}+`}
+            </h5>
+            <p style={{ fontWeight: 400, fontSize: 18, lineHeight: '24px', letterSpacing: '0.02em', color: 'rgba(255,255,255,0.75)', margin: 0 }}>
+              {card.text}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }

@@ -7,9 +7,17 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
+const container: React.CSSProperties = {
+  maxWidth: 1280,
+  width: '100%',
+  margin: '0 auto',
+  padding: '0 48px',
+  boxSizing: 'border-box',
+};
+
 export function Layout({ children }: LayoutProps) {
   return (
-    <div className="max-w-[1280px] w-full mx-auto">
+    <div style={container}>
       <Header />
       <main>{children}</main>
       <Footer />
