@@ -1,4 +1,4 @@
-# Portfolio Landing Page 9 - Next.js, TypeScript, TailwindCSS Frontend Project
+# Portfolio Landing Page 9 - Next.js, React, TypeScript, TailwindCSS Frontend Project
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
@@ -10,7 +10,10 @@ A modern, single-page portfolio template built with the Next.js App Router and T
 
 **Live Demo:** [https://portfolio-ui-9.vercel.app/](https://portfolio-ui-9.vercel.app/)
 
----
+<img width="1872" height="931" alt="Screenshot 2026-03-07 at 12 01 11" src="https://github.com/user-attachments/assets/f5dd9b8f-e513-44bf-a4e0-2b5bc9ebcfed" />
+<img width="1858" height="938" alt="Screenshot 2026-03-07 at 12 01 29" src="https://github.com/user-attachments/assets/afe93aa2-b918-4625-9370-b87498611f2d" />
+<img width="1849" height="896" alt="Screenshot 2026-03-07 at 12 01 44" src="https://github.com/user-attachments/assets/5338d4c6-aba9-4d7b-b39b-7c7e6d1ef01c" />
+<img width="1838" height="922" alt="Screenshot 2026-03-07 at 12 01 54" src="https://github.com/user-attachments/assets/985e0b95-b990-435c-9f01-bf70a7e6efab" />
 
 ## Table of Contents
 
